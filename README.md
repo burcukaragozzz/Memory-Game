@@ -1,3 +1,3 @@
 # Memory-Game
 
-memoryGame-challenge.surge.sh
+memory-game-challenge.surge.sh
