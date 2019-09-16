@@ -39,7 +39,7 @@ class Card extends Component {
     return(
       <>
         <div className={cardClasses} onClick={this.cardClick}>
-          <div className={isVisible ? "box--active" : "box--passive"}id={id}>{value}</div>
+          <div className={isVisible ? "box--active" : "box--passive"} id={id}>{value}</div>
         </div>
       </>
     );

@@ -107,19 +107,19 @@
   display: flex;
   justify-content: center;
   font-size: 36px;
-  color: #555555;
-  width:100%;
-  margin-top:4%;
+  color: #555;
+  width: 100%;
+  margin-top: 4%;
 }
 
 .game-score-container button {
   background-color: white;
-  color:#555555;
+  color: #555;
   position: relative;
-  display:flex;
+  display: flex;
   justify-content: center;
   margin: auto;
-  border: 2px solid #555555;
+  border: 2px solid #555;
   font-size: 24px;
   font-weight: bold;
   transition-duration: 0.4s;
@@ -129,6 +129,6 @@
 
 .game-score-container button:hover {
   background-color: rgb(73, 72, 72); /* Green */
-  color:#c0ff3e;
-  cursor:pointer;
+  color: #c0ff3e;
+  cursor: pointer;
 }
