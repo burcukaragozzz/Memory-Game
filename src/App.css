@@ -1,0 +1,122 @@
+.App {
+  text-align: center;
+}
+
+.container {
+  align-items: center;
+  margin-bottom: 5px; 
+  position: relative;
+}
+
+.cards {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100vh;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex: 1 1;
+  flex-basis: 23%;
+  background-color: rgb(53, 52, 51);
+  height: calc(25vh - 6px);
+  margin-left: 5px;
+  color: white;
+  font-size: 7vmin;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+}
+
+.card:nth-child(4n) {
+  margin-right: 5px;
+}
+
+.card:nth-child(-n + 4) {
+  margin-top: 5px;
+}
+
+.cardText{
+  visibility: hidden;
+}
+
+.box-active {
+  opacity: 1;
+  transition: 1s;
+}
+
+.box-passive {
+  opacity: 0;
+  transition: 1s;
+}
+
+.gameOver {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: auto;
+}
+
+.imageContainer {
+  display:flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+}
+
+.resultLine{
+  display: flex;
+  position: absolute;
+  left: 41.5%;
+  flex-direction: row;
+  top: 37.5%;
+  text-align: center;
+}
+
+.line_1 {
+  display: flex;
+  background-color: rgb(218, 82, 29);
+  height: 7px;
+  width: 125px;
+  border-radius: 5px;
+}
+
+.line_2 {
+  display: flex;
+  background-color: transparent;
+  height: 5px;
+  width: 100px;
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+  font-size: 36px;
+  color: #555555;
+  width:100%;
+  margin-top:4%;
+}
+
+.gameOver button {
+  background-color: white;
+  color:#555555;
+  position: relative;
+  display:flex;
+  justify-content: center;
+  margin: auto;
+  border: 2px solid #555555;
+  font-size: 24px;
+  font-weight: bold;
+  transition-duration: 0.4s;
+  border-radius: 5px;
+  width: 20%;
+}
+
+.gameOver button:hover {
+  background-color: rgb(73, 72, 72); /* Green */
+  color:#c0ff3e;
+  cursor:pointer;
+}
