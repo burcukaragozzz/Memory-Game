@@ -1,3 +1,3 @@
 # Memory-Game
 
-[Challange](https://memory-game-challenge.surge.sh)
+[Challenge](https://memory-game-challenge.surge.sh)
