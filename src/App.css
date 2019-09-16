@@ -29,6 +29,17 @@
   font-weight: bold;
   align-items: center;
   justify-content: center;
+  transition: 1s;
+}
+
+.card--active {
+  background-color: white;
+  pointer-events: none;
+}
+
+.card--passive {
+  background-color: rgb(53, 52, 51);
+  pointer-events: auto;
 }
 
 .card:nth-child(4n) {
@@ -43,40 +54,41 @@
   visibility: hidden;
 }
 
-.box-active {
+.box--active {
   opacity: 1;
   transition: 1s;
 }
 
-.box-passive {
+.box--passive {
   opacity: 0;
   transition: 1s;
 }
 
-.gameOver {
+.game-score-container {
   display: flex;
   flex-direction: column;
   position: relative;
   margin: auto;
 }
 
-.imageContainer {
+.game-score-table {
   display:flex;
   align-items: center;
   position: relative;
   justify-content: center;
 }
 
-.resultLine{
+.game-score-result-line{
   display: flex;
   position: absolute;
-  left: 41.5%;
+  left: 50%;
   flex-direction: row;
-  top: 37.5%;
+  top: 40%;
   text-align: center;
+  transform: translate(-50%, -40%) rotate(0deg);
 }
 
-.line_1 {
+.game-score-result-line__left-visible{
   display: flex;
   background-color: rgb(218, 82, 29);
   height: 7px;
@@ -84,14 +96,14 @@
   border-radius: 5px;
 }
 
-.line_2 {
+.game-score-result-line__right-hidden{
   display: flex;
   background-color: transparent;
   height: 5px;
   width: 100px;
 }
 
-.score {
+.game-score-result-text {
   display: flex;
   justify-content: center;
   font-size: 36px;
@@ -100,7 +112,7 @@
   margin-top:4%;
 }
 
-.gameOver button {
+.game-score-container button {
   background-color: white;
   color:#555555;
   position: relative;
@@ -115,7 +127,7 @@
   width: 20%;
 }
 
-.gameOver button:hover {
+.game-score-container button:hover {
   background-color: rgb(73, 72, 72); /* Green */
   color:#c0ff3e;
   cursor:pointer;
