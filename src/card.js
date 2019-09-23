@@ -7,7 +7,7 @@ class Card extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.selected) {
+    if (nextProps.selected !== this.props.selected && nextProps.selected) {
       this.setState({
         isActive: true
       });
@@ -24,21 +24,22 @@ class Card extends Component {
       })
     }
   };
-
+ 
   render() {
     const { isActive } = this.state;
     const { id, value, isVisible } = this.props;
+
+    let cardClasses = 'card';
+    if (isActive) {
+      cardClasses += " card--active";
+    } else {
+      cardClasses += " card--passive";
+    }
     
     return(
       <>
-        <div
-          className="card cardClick"
-          style={{ backgroundColor: `${ isActive ? 'white' : ' rgb(53, 52, 51)'}`,transition: '1s', pointerEvents: `${ isActive ? 'none' : 'auto'}`}}
-          onClick={this.cardClick}>
-          <div className={isVisible ? "box-active" : "box-passive"}
-          style={{ color: `${ isActive ? 'transparent' : '#c0ff3e'}`}}
-          id={id}>{value} 
-          </div>
+        <div className={cardClasses} onClick={this.cardClick}>
+          <div className={isVisible ? "box--active" : "box--passive"} id={id}>{value}</div>
         </div>
       </>
     );
